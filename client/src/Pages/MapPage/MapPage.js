@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 // import { render } from 'react-dom'
 // import PropTypes from 'prop-types';
 import './MapPage.css'
-import Map from '../../Components/Map'
+import HikingMap from '../../Components/HikingMap'
 
 class MapPage extends Component  {
   constructor(props){
@@ -17,8 +17,8 @@ class MapPage extends Component  {
   render() {
  
   return (
-    <div id='container'>
-      <Map />
+    <div>
+      <HikingMap />
     </div>
   );
   }
@@ -27,4 +27,4 @@ class MapPage extends Component  {
 
 // render(<Map />, document.getElementById('container'))
 
-export default MapPage
+export default MapPage;

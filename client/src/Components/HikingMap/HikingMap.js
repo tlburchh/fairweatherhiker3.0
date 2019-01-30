@@ -1,13 +1,9 @@
 import React from 'react';
-import styled from "styled-components";
-import {Map as LeafletMap, TileLayer, Marker, Popup } from 'react-leaflet';
-import './Map.css';
+import {Map, TileLayer, Marker, Popup } from 'react-leaflet';
+import './HikingMap.css';
 
-  const MapContainer = styled(LeafletMap)`
-  width: 100%;
-  height: 100%;
-  `;
-class SimpleMap extends React.Component {
+  
+class HikingMap extends React.Component {
   constructor() {
     super()
     this.state = {
@@ -19,7 +15,7 @@ class SimpleMap extends React.Component {
   render() {
     const position = [this.state.lat, this.state.lng];
     return (
-      <MapContainer center={position} zoom={this.state.zoom}>
+      <Map className="container" center={position} zoom={this.state.zoom}>
         <TileLayer
           attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
           url='http://{s}.tile.osm.org/{z}/{x}/{y}.png'
@@ -29,9 +25,9 @@ class SimpleMap extends React.Component {
             A pretty CSS3 popup. <br/> Easily customizable.
           </Popup>
         </Marker>
-      </MapContainer>
+      </Map>
     );
   }
 }
- export default SimpleMap;
+ export default HikingMap;
 
