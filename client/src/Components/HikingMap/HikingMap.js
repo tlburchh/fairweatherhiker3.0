@@ -8,8 +8,8 @@ class HikingMap extends React.Component {
   constructor() {
     super()
     this.state = {
-      lat: 51.505,
-      lng: -0.09,
+      lat: 0,
+      lng: 0,
       zoom: 13
     }
   }

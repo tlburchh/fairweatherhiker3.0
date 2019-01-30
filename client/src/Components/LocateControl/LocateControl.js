@@ -1,8 +1,8 @@
-import React, { Component } from "react";
+import React from "react";
 import { withLeaflet } from "react-leaflet";
 import Locate from "leaflet.locatecontrol";
 
-class LocateControl extends Component {
+class LocateControl extends React.Component {
   componentDidMount() {
     const { options, startDirectly } = this.props;
     const { map } = this.props.leaflet;
